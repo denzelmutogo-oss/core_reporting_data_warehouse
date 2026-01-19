@@ -1,13 +1,22 @@
 # 🏢 SQL Server Data Warehouse Project
 
+
 ---
 
 ## 📌 Project Overview
-This project is a **hands-on SQL Server data warehouse build** designed to reflect real-world **Business Intelligence and analytics environments**. It demonstrates how raw operational data flows through a structured pipeline and becomes **clean, trusted, analytics-ready data**.
 
-Data from **CRM and ERP systems** is processed using a **Medallion(Bronze → Silver → Gold)** architecture and modeled into business-friendly datasets that can be easily consumed by BI tools, analysts, and stakeholders.
+This project demonstrates how a SQL Server data warehouse is designed and built to **directly support business reporting and decision-making**.
 
-The focus is on **data quality, clarity, and usability**, not just writing SQL.
+Key objectives of the project include:
+
+* Translating **operational CRM and ERP data** into analytics-ready datasets
+* Supporting **business questions, KPIs, and executive reporting**, not just technical transformations
+* Implementing a **Medallion Architecture (Bronze → Silver → Gold)** to improve data trust and usability
+* Ensuring data is **clean, consistent, and governed** before reaching BI tools
+* Designing models that enable **self-service analytics** for analysts and stakeholders
+* Reflecting **real-world BI practices** used in healthcare, finance, and enterprise environments
+
+The result is a structured data foundation that allows business users to **trust metrics, identify trends, and make informed decisions**.
 
 ---
 
@@ -15,67 +24,101 @@ The focus is on **data quality, clarity, and usability**, not just writing SQL.
 
 ![Data Warehouse Architecture](docs/data_architecture.png)
 
-The diagram above shows the end-to-end architecture, illustrating how data moves from source systems through the Bronze, Silver, and Gold layers before reaching reporting and analytics.
+This architecture reflects how production BI platforms are designed to:
 
-This layered approach ensures **scalability, traceability, and maintainability**.
+* Isolate raw source data from reporting logic
+* Protect data integrity while allowing transformation flexibility
+* Scale as data volume, users, and reporting needs grow
 
 ---
 
 ## 🔄 Data Flow & Lineage
+
 ![Data Flow & Lineage](docs/data_flow.png)
 
-This diagram highlights table-level lineage across layers and shows how CRM and ERP data is transformed into analytical models.
+This lineage view demonstrates how data is traceable from **source systems to business metrics**, enabling:
 
-**Data Flow Summary:**
-1. Source Systems (CRM / ERP)  
-2. Bronze – Raw ingestion  
-3. Silver – Cleansed & standardized  
-4. Gold – Dimensional model  
-5. Consumption – BI dashboards & analytics  
+* Confidence in reported KPIs
+* Easier root-cause analysis when numbers change
+* Transparency for analysts, auditors, and stakeholders
+
+### Data Flow Summary
+
+1. **Source Systems (CRM / ERP)** – Capture customer, sales, and operational activity
+2. **Bronze Layer** – Preserves raw data for auditing and reconciliation
+3. **Silver Layer** – Cleans, standardizes, and aligns data to business definitions
+4. **Gold Layer** – Structures data into a dimensional model optimized for analytics
+5. **Consumption Layer** – BI dashboards, KPIs, and ad-hoc analysis
+
+---
+
+## 📂 Repository Structure
+
+```text
+sql-server-data-warehouse/
+│
+├── datasets/               # Source system extracts (as received)
+│   ├── source_crm/         # CRM source data
+│   └── source_erp/         # ERP source data
+│
+├── scripts/                # SQL transformation logic
+│   ├── bronze/             # Raw ingestion & source-aligned tables
+│   ├── silver/             # Cleansed, standardized business data
+│   └── gold/               # Analytics-ready dimensional models
+│
+├── tests/                  # Data quality & validation checks
+│   ├── quality_checks_silver/
+│   └── quality_checks_gold/
+│
+├── docs/                   # Business & technical documentation
+│   ├── data_architecture.png
+│   ├── data_catalogue.md
+│   ├── data_flow.png
+│   ├── data_integration.png
+│   ├── data_model.png
+│   └── naming_conventions.md
+│
+├── LICENSE                 # MIT License
+└── README.md               # Project overview & business context
+```
 
 ---
 
 ## 🛠️ Technologies Used
-- Microsoft SQL Server  
-- T-SQL (CTEs, window functions, stored procedures)  
-- Star schema dimensional modeling  
-- Batch ETL patterns  
+
+* **Microsoft SQL Server**
+* **T-SQL** (CTEs, window functions, stored procedures)
+* **Star schema dimensional modeling**
+* **Batch ETL design patterns**
 
 ---
 
-## 📊 Use Cases
-- BI & dashboarding (Tableau, Power BI)  
-- Ad-hoc analytical queries  
-- KPI and performance reporting  
-- Data validation and exploration  
+## 📊 Business Use Cases Enabled
 
----
+This warehouse is designed to directly support business stakeholders by enabling:
 
-## 🎯 Key Skills Demonstrated
-- SQL-based ETL development  
-- Data warehousing & dimensional modeling  
-- Data cleansing and standardization  
-- BI-ready data design  
-- Analytics and reporting enablement  
+* Executive dashboards with trusted KPIs
+* Sales and revenue performance analysis
+* Customer and operational trend analysis
+* Consistent metrics across Tableau and Power BI
+* Self-service analytics without breaking data logic
 
 ---
 
 ## 🚀 Future Enhancements
-- Incremental loading & SCD Type 2  
-- Expanded data quality checks  
-- Performance optimization  
-- ETL orchestration  
+
+* Incremental loading & **SCD Type 2** for historical analysis
+* Expanded data quality rules aligned to business KPIs
+* Query and model optimization for executive dashboards
+* ETL orchestration for production-scale reliability
 
 ---
 
 ## 👤 About Me
 
-**Denzel Mutogo**  
+**Denzel Mutogo**
 *Tableau Developer | Data Analyst | Business Intelligence*
 
-I focus on building **analytics-ready data models and BI solutions** that turn complex data into clear, actionable insights. My work spans **Excel, SQL, ETL, Tableau, and Power BI**, with experience supporting analytics in **healthcare and finance**.
+I specialize in building **business-aligned data models and BI solutions** that bridge the gap between raw data and strategic decision-making. My experience spans **SQL, ETL, Tableau, Power BI, and Excel**, supporting analytics across **healthcare and finance**.
 
-This project reflects how I approach BI work: structured pipelines, strong data quality, and models designed specifically for reporting and analysis.
-
----
 
