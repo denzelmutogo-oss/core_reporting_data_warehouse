@@ -1,96 +1,81 @@
-# SQL Server Data Warehouse Project
-
+# 🏢 SQL Server Data Warehouse Project
 
 ---
+
 ## 📌 Project Overview
+This project is a **hands-on SQL Server data warehouse build** designed to reflect real-world **Business Intelligence and analytics environments**. It demonstrates how raw operational data flows through a structured pipeline and becomes **clean, trusted, analytics-ready data**.
 
-This project is a **hands-on SQL Server data warehouse build** designed to mirror how data is handled in real production environments. Rather than focusing only on queries or isolated transformations, the project demonstrates how raw operational data moves through a structured pipeline and becomes **trusted, analytics-ready data**.
+Data from **CRM and ERP systems** is processed using a **Medallion(Bronze → Silver → Gold)** architecture and modeled into business-friendly datasets that can be easily consumed by BI tools, analysts, and stakeholders.
 
-The warehouse integrates data from **CRM and ERP systems**, applies progressive refinement using a **Bronze → Silver → Gold** architecture, and delivers a dimensional model that can be consumed confidently by BI tools, analysts, and stakeholders.
-
-The emphasis throughout the project is on **clarity, data quality, and business usability**, not just technical correctness.
+The focus is on **data quality, clarity, and usability**, not just writing SQL.
 
 ---
+
 ## 🏗️ Architecture Overview
 
 ![Data Warehouse Architecture](docs/data_architecture.png)
 
-The diagram above illustrates the full end-to-end architecture, showing how data flows from source systems through the Bronze, Silver, and Gold layers before being consumed by analytics and reporting tools.
+The diagram above shows the end-to-end architecture, illustrating how data moves from source systems through the Bronze, Silver, and Gold layers before reaching reporting and analytics.
+
+This layered approach ensures **scalability, traceability, and maintainability**.
 
 ---
 
 ## 🔄 Data Flow & Lineage
-
 ![Data Flow & Lineage](docs/data_flow.png)
 
-The diagram above provides a detailed view of table-level lineage across layers, highlighting how CRM and ERP datasets are transformed and integrated into dimensional models.
+This diagram highlights table-level lineage across layers and shows how CRM and ERP data is transformed into analytical models.
 
-1. **Source Systems (CRM / ERP)**
-2. **Bronze Layer** – Raw ingestion (no transformations)
-3. **Silver Layer** – Cleansed and standardized datasets
-4. **Gold Layer** – Dimensional model (facts & dimensions)
-5. **Consumption** – BI dashboards, ad-hoc SQL, analytics
+**Data Flow Summary:**
+1. Source Systems (CRM / ERP)  
+2. Bronze – Raw ingestion  
+3. Silver – Cleansed & standardized  
+4. Gold – Dimensional model  
+5. Consumption – BI dashboards & analytics  
 
-The layered approach ensures **clear data lineage, auditability, and maintainability**.
-
-
+---
 
 ## 🛠️ Technologies Used
-
-* Microsoft SQL Server
-* T-SQL (CTEs, window functions, stored procedures)
-* Star schema dimensional modeling
-* Batch ETL patterns
+- Microsoft SQL Server  
+- T-SQL (CTEs, window functions, stored procedures)  
+- Star schema dimensional modeling  
+- Batch ETL patterns  
 
 ---
 
 ## 📊 Use Cases
-
-* BI & Reporting (Power BI, Tableau)
-* Ad-hoc analytical queries
-* KPI and metric reporting
-* Data exploration and validation
+- BI & dashboarding (Tableau, Power BI)  
+- Ad-hoc analytical queries  
+- KPI and performance reporting  
+- Data validation and exploration  
 
 ---
 
 ## 🎯 Key Skills Demonstrated
-
-* Data warehouse design & modeling
-* Medallion architecture implementation
-* ETL development using SQL Server
-* Data cleansing and standardization
-* Dimensional modeling (facts & dimensions)
-* Business-ready analytics design
+- SQL-based ETL development  
+- Data warehousing & dimensional modeling  
+- Data cleansing and standardization  
+- BI-ready data design  
+- Analytics and reporting enablement  
 
 ---
 
 ## 🚀 Future Enhancements
-
-* Incremental loading strategies
-* Slowly Changing Dimensions (SCD Type 2)
-* Data quality checks & error logging
-* Performance optimization (indexes, partitioning)
-* Orchestration using SQL Agent / Azure Data Factory
+- Incremental loading & SCD Type 2  
+- Expanded data quality checks  
+- Performance optimization  
+- ETL orchestration  
 
 ---
 
-## 📎 Repository Structure
+## 👤 About Me
 
+**Denzel Mutogo**  
+*Tableau Developer | Data Analyst | Business Intelligence*
 
+I focus on building **analytics-ready data models and BI solutions** that turn complex data into clear, actionable insights. My work spans **Excel, SQL, ETL, Tableau, and Power BI**, with experience supporting analytics in **healthcare and finance**.
 
+This project reflects how I approach BI work: structured pipelines, strong data quality, and models designed specifically for reporting and analysis.
 
 ---
-
-## 🧠 Summary
-
-This project demonstrates more than just SQL proficiency — it shows how to think about data as a product. From preserving raw inputs to delivering clean, business-friendly models, the warehouse reflects real-world patterns used in enterprise analytics teams.
-
-It highlights an understanding of:
-
-* End-to-end data flow and lineage
-* Data quality and standardization
-* Dimensional modeling for analytics
-* Designing systems that are easy to maintain and scale
-
-Overall, this project represents a practical, production-oriented approach to building a SQL Server data warehouse.
 
